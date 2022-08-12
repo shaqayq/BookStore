@@ -1,0 +1,13 @@
+form {
+  padding: 40px;
+}
+
+label {
+  font-weight: bold;
+}
+
+form label,
+input,
+button {
+  margin-left: 10px;
+}

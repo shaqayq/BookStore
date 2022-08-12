@@ -1,0 +1,8 @@
+.navItem {
+  list-style: none;
+}
+
+.navItem li {
+  display: inline;
+  padding: 20px;
+}
