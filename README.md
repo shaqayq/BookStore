@@ -9,8 +9,8 @@
 
 - Major languages: HTML , CSS , React.
 
-## Live Demo
-[Live Demo Link]()
+<!-- ## Live Demo
+[Live Demo Link]() -->
 
 ## Getting Started
 
