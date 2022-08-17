@@ -1,32 +1,28 @@
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
-const books = [];
+const books = [
+  { id: '1', name: 'Holly war', author: 'person1' },
+  { id: '2', name: 'Alies in mageic world', author: 'person2' },
+];
 
-export const addBook = (id, title) => ({
+export const addBook = (data) => ({
   type: ADD_BOOK,
-  book: {
-    id,
-    name: title,
-  },
+  data,
 });
 
-export const removeBook = (ID) => ({
+export const removeBook = (id) => ({
   type: REMOVE_BOOK,
-  id: ID,
+  id,
 });
 
 const bookReducer = (state = books, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return {
-        ...state,
-        books: [...state, action.book],
-      };
+      return [...state, action.data];
+
     case REMOVE_BOOK:
-      return {
-        ...state, books: books.filter((e) => e.id !== action.id),
-      };
+      return state.filter((e) => e.id !== action.id);
     default:
       return state;
   }

@@ -1,22 +1,15 @@
-const UNDER_CONSTRUCTION = 'UNDER_CONSTRACTION';
-const COMPELET = 'COMPLETE';
+const CHECK = 'CHECK';
 
-const categories = [];
-
-export const unCompelet = () => ({
-  type: UNDER_CONSTRUCTION,
+export const checkStatus = (status) => ({
+  type: CHECK,
+  status,
 });
 
-export const complete = () => ({
-  type: COMPELET,
-});
-
-const categoriesReducer = (state = categories, action) => {
+const categoriesReducer = (state = null, action) => {
   switch (action.type) {
-    case UNDER_CONSTRUCTION:
-      return false;
-    case COMPELET:
-      return true;
+    case CHECK:
+      return action.status;
+
     default:
       return state;
   }
