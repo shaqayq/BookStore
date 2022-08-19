@@ -28,15 +28,15 @@ const Form = () => {
 
   return (
     <>
-      <form>
-        <label htmlFor="title">Title: </label>
-        <input name="name" type="text" placeholder="Enter book title" id="title" onChange={newItem} />
+      <div className="dataForm">
+        <h1 className="heading">ADD NEW BOOK</h1>
+        <form>
+          <input name="name" type="text" placeholder="Enter book title" id="title" onChange={newItem} className="name" />
+          <input name="author" type="text" placeholder="Enter book author name" id="authore" onChange={newItem} className="authore" />
 
-        <label htmlFor="authore">Authore</label>
-        <input name="author" type="text" placeholder="Enter book author name" id="authore" onChange={newItem} />
-
-        <button type="button" onClick={getBook}>Add Book</button>
-      </form>
+          <button type="button" onClick={getBook} className="addBook">Add Book</button>
+        </form>
+      </div>
     </>
   );
 };
