@@ -1,14 +1,15 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { deleteBook } from '../redux/books/books';
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
-  const { id, name, author } = book;
+  const { item_id, title, author } = book;
 
   const removeItem = (e) => {
     e.preventDefault();
-    dispatch(removeBook(id));
+    dispatch(deleteBook(item_id));
   };
 
   return (
@@ -16,7 +17,7 @@ const Book = ({ book }) => {
       <section className="book">
         <h3>
           Book Title:
-          {name}
+          {title}
 
         </h3>
         <h4>

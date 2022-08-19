@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../style/form.css';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { postBook } from '../redux/books/books';
 
 const Form = () => {
   const [book, addNewBook] = useState();
@@ -17,12 +17,13 @@ const Form = () => {
 
   const getBook = () => {
     const newBook = {
-      id: uuidv4(),
-      name: book.name,
+      item_id: uuidv4(),
+      title: book.name,
       author: book.author,
+      category: 'holly',
     };
 
-    return dispatch(addBook(newBook));
+    return dispatch(postBook(newBook));
   };
 
   return (
