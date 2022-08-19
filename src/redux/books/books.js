@@ -12,23 +12,13 @@ export const addBook = (data) => ({
   data,
 });
 
-// export const removeBook = (id) => ({
-//   type: REMOVE_BOOK,
-//   id,
-// });
-
-// export const fetching = (data) => ({
-//   type: FETCH_NEW_BOOK,
-//   data,
-// });
-
 const bookReducer = (state = books, action) => {
   switch (action.type) {
     case `${FETCH_NEW_BOOK}/fulfilled`:
       return action.payload;
 
-    case ADD_BOOK:
-      return [...state, action.data];
+    case `${ADD_BOOK}/fulfilled`:
+      return [...state, action.payload.book];
 
     case `${REMOVE_BOOK}/fulfilled`:
       return state.filter((e) => e.item_id !== action.payload);
@@ -55,7 +45,7 @@ export const getBooks = createAsyncThunk(FETCH_NEW_BOOK, async () => {
 });
 
 export const postBook = createAsyncThunk(ADD_BOOK, async (book) => {
-  const response = await fetch(BaseURL, {
+  await fetch(BaseURL, {
     method: 'POST',
     body: JSON.stringify(book),
     headers: {
@@ -63,18 +53,17 @@ export const postBook = createAsyncThunk(ADD_BOOK, async (book) => {
     },
   });
 
-  const data = await response.text();
-  return data;
+  return { book };
 });
 
 export const deleteBook = createAsyncThunk(REMOVE_BOOK, async (id) => {
-  await fetch(`${BaseURL}/id`, {
+  await fetch(`${BaseURL}/${id}`, {
     method: 'DELETE',
     body: JSON.stringify({
       item_id: id,
     }),
-  });
 
+  });
   return id;
 });
 

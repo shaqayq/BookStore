@@ -17,7 +17,7 @@ const Home = () => {
       <div className="bookList">
         <h1>Book Lists</h1>
         {lists.map((item) => (
-          <Book book={item} key={item.id} />
+          <Book book={item} key={item.item_id} />
         ))}
       </div>
       <Form />
