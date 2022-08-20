@@ -1,8 +1,61 @@
-.navItem {
-  list-style: none;
+.navbar {
+  display: flex;
+  flex-direction: row;
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: #fff;
 }
 
-.navItem li {
-  display: inline;
-  padding: 20px;
+.navbar span {
+  margin: 36px;
+}
+
+.logo {
+  width: 15rem;
+  height: 2.313rem;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.BOOKS a {
+  width: 3.688rem;
+  height: 1rem;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-decoration: none;
+  margin: 36px;
+}
+
+.CATEGORIES a {
+  width: 6.563rem;
+  height: 1rem;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  text-decoration: none;
+  margin: 36px;
+}
+
+.Oval {
+  width: 2.813rem;
+  margin: 26px 0 0 29.5rem;
+  padding: 0.875rem;
+  font-size: 26px;
+  color: #0290ff;
 }
