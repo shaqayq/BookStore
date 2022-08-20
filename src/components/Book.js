@@ -1,8 +1,10 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import { deleteBook } from '../redux/books/books';
-import '../style/home.css';
+import '../style/progressStyle.css';
+import '../style/book.css';
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
@@ -12,6 +14,8 @@ const Book = ({ book }) => {
     e.preventDefault();
     dispatch(deleteBook(item_id));
   };
+
+  const number = Math.floor(Math.random() * 100);
 
   return (
     <>
@@ -48,15 +52,21 @@ const Book = ({ book }) => {
             </li>
           </ul>
         </div>
-        <div className="precentag">
-          <div className="Rectangle-3" />
-          <span className="-Percent-Complete">
-            {Math.floor(Math.random() * 100)}
-            %
-          </span>
-          <span className="Completed Text-Style-2">
-            Completed
-          </span>
+
+        <div className="ChartPrecntage">
+          <div className="chart">
+            <CircularProgressbar value={number} />
+          </div>
+          <div className="precentag">
+            <div className="Rectangle-3" />
+            <h6 className="-Percent-Complete">
+              {number}
+              %
+            </h6>
+            <span className="Completed Text-Style-2">
+              Completed
+            </span>
+          </div>
         </div>
         <div className="bookState">
           <h4 className="Current-Chapter">

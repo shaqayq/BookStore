@@ -1,7 +1,5 @@
 .dataForm {
-  width: 60.5rem;
-  margin: 2.313rem 4.25rem 0;
-  padding: 2rem 9.188rem 3.625rem 1.688rem;
+  padding: 2px 32px 81px 32px;
 }
 
 form {
@@ -23,7 +21,7 @@ form {
 }
 
 .name {
-  width: 23.5rem;
+  width: 34.5rem;
   height: 1.813rem;
   margin: 1.188rem 2.125rem 0 0;
   padding: 0.375rem 0.938rem 0.563rem 1rem;

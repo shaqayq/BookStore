@@ -1,9 +1,10 @@
 .book {
   display: flex;
-  width: 52.5rem;
+  justify-content: space-between;
+  width: 71.5rem;
   height: 10.625rem;
   margin: 2.313rem 4.25rem 0;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  padding: 2rem 2.188rem 1.625rem 1.688rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
@@ -103,10 +104,16 @@
   color: #4386bf;
 }
 
+.ChartPrecntage {
+  display: flex;
+  padding: 24px;
+}
+
 .precentag {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  padding: 17px;
 }
 
 .Completed {
@@ -177,4 +184,9 @@
 hr {
   width: 95%;
   margin: 21px auto;
+}
+
+.chart {
+  width: 85px;
+  margin-top: 3%;
 }
